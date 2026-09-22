@@ -76,6 +76,3 @@ SELECT
 FROM priority_mart.priority_jobs_snapshot
 GROUP BY job_title_short
 ORDER BY job_count DESC;
-
-
-
