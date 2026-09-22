@@ -9,7 +9,11 @@ FROM read_csv('https://storage.googleapis.com/sql_de/company_dim.csv',
 
 SELECT '=== Loading skills_dim Table ===' AS info;
 
+<<<<<<< HEAD
 INSERT INTO skills_dim(skill_id, skill, type)
+=======
+INSERT INTO skills_dim(skill_id, skills, type)
+>>>>>>> develop/project-2
 SELECT skill_id, skills, type
 FROM read_csv('https://storage.googleapis.com/sql_de/skills_dim.csv',
     AUTO_DETECT=true);
@@ -37,6 +41,7 @@ SELECT skill_id, job_id
 FROM read_csv('https://storage.googleapis.com/sql_de/skills_job_dim.csv',
     AUTO_DETECT=true);
 
+<<<<<<< HEAD
 SELECT 'Company Dim' AS table_name, COUNT(*) AS record_count FROM company_dim
 UNION ALL
 SELECT 'Skills Dim', COUNT(*) FROM skills_dim
@@ -53,3 +58,5 @@ SELECT '=== Job Postings Fact ===' AS info;
 SELECT * FROM job_postings_fact LIMIT 5;
 SELECT '=== Skills Job Dim ===' AS info;
 SELECT * FROM skills_job_dim LIMIT 5;
+=======
+>>>>>>> develop/project-2
